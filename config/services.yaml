@@ -18,12 +18,14 @@ services:
     # this creates a service per class whose id is the fully-qualified class name
     App\:
         resource: '../src/*'
-        # you can exclude directories or files
-        # but if a service is unused, it's removed anyway
         exclude: '../src/{DataFixtures,Entity,Migrations,Tests}'
+
+    App\Ui\Admin\Action\:
+        resource: '../src/Ui/Admin/Action'
+        tags: ['controller.service_arguments']
 
     # controllers are imported separately to make sure they
     # have the tag that allows actions to type-hint services
-    App\Controller\:
-        resource: '../src/Controller'
-        tags: ['controller.service_arguments']
+    # App\Controller\:
+    #     resource: '../src/Controller'
+    #     tags: ['controller.service_arguments']
