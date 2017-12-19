@@ -1,6 +1,11 @@
-#easy_admin:
-#    entities:
-#        # List the entity class name you want to manage
-#        - App\Entity\Product
-#        - App\Entity\Category
-#        - App\Entity\User
+easy_admin:
+    entities:
+        Category:
+            class: App\Domain\Category\Category
+            controller: App\Ui\Admin\Controller\CategoryController
+        Tag:
+            class: App\Domain\Tag\Tag
+            controller: App\Ui\Admin\Controller\TagController
+        Post:
+            class: App\Domain\Post\Post
+            controller: App\Ui\Admin\Controller\PostController

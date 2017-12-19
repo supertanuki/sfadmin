@@ -25,16 +25,20 @@ class Post
     /** @var ArrayCollection */
     private $tags;
 
-    public function __construct(string $title, string $content, \DateTimeInterface $createdAt, Category $category)
-    {
-        $this->title = $title;
-        $this->content = $content;
+    public function __construct(
+        string $title,
+        string $content,
+        \DateTimeInterface $createdAt,
+        ?Category $category = null
+    ) {
+        $this->title     = $title;
+        $this->content   = $content;
         $this->createdAt = $createdAt;
-        $this->category = $category;
-        $this->tags = new ArrayCollection();
+        $this->category  = $category;
+        $this->tags      = new ArrayCollection();
     }
 
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -57,16 +61,53 @@ class Post
     /**
      * @return Category
      */
-    public function getCategory(): Category
+    public function getCategory(): ?Category
     {
         return $this->category;
     }
 
-    /**
-     * @return ArrayCollection
-     */
-    public function getTags(): ArrayCollection
+    public function getTags()
     {
         return $this->tags;
+    }
+
+    /**
+     * @param string $title
+     */
+    public function setTitle(string $title): void
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * @param string $content
+     */
+    public function setContent(string $content): void
+    {
+        $this->content = $content;
+    }
+
+    /**
+     * @param \DateTimeInterface $createdAt
+     */
+    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @param Category $category
+     */
+    public function setCategory(Category $category): void
+    {
+        $this->category = $category;
+    }
+
+    /**
+     * @param ArrayCollection $tags
+     */
+    public function setTags(ArrayCollection $tags): void
+    {
+        $this->tags = $tags;
     }
 }

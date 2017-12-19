@@ -4,7 +4,7 @@ namespace App\Domain\Category;
 
 class Category
 {
-    /** @var int */
+    /** @var null|int */
     private $id;
 
     /** @var string */
@@ -19,27 +19,33 @@ class Category
         $this->createdAt = $createdAt;
     }
 
-    /**
-     * @return int
-     */
-    public function getId(): int
+    public function __toString(): string
+    {
+        return $this->getLabel();
+    }
+
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
     public function getLabel(): string
     {
         return $this->label;
     }
 
-    /**
-     * @return \DateTimeInterface
-     */
     public function getCreatedAt(): \DateTimeInterface
     {
         return $this->createdAt;
+    }
+
+    public function setLabel(string $label): void
+    {
+        $this->label = $label;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    {
+        $this->createdAt = $createdAt;
     }
 }

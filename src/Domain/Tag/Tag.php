@@ -4,7 +4,7 @@ namespace App\Domain\Tag;
 
 class Tag
 {
-    /** @var int */
+    /** @var null|int */
     private $id;
 
     /** @var string */
@@ -19,7 +19,12 @@ class Tag
         $this->createdAt = $createdAt;
     }
 
-    public function getId(): int
+    public function __toString(): string
+    {
+        return $this->getLabel();
+    }
+
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -32,5 +37,15 @@ class Tag
     public function getCreatedAt(): \DateTimeInterface
     {
         return $this->createdAt;
+    }
+
+    public function setLabel(string $label): void
+    {
+        $this->label = $label;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    {
+        $this->createdAt = $createdAt;
     }
 }
