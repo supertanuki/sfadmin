@@ -1,0 +1,15 @@
+App\Domain\Post\Post:
+    type: entity
+    table: post
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: auto
+    fields:
+        title:
+            type: string
+        content:
+            type: text
+        createdAt:
+            type: datetime
