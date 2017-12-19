@@ -1,0 +1,13 @@
+App\Domain\Category\Category:
+    type: entity
+    table: category
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: auto
+    fields:
+        label:
+            type: string
+        createdAt:
+            type: datetime

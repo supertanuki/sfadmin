@@ -13,3 +13,9 @@ App\Domain\Post\Post:
             type: text
         createdAt:
             type: datetime
+    manyToOne:
+        category:
+            targetEntity: App\Domain\Category\Category
+    manyToMany:
+        tags:
+            targetEntity: App\Domain\Tag\Tag

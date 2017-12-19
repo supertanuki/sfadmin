@@ -1,0 +1,13 @@
+App\Domain\Tag\Tag:
+    type: entity
+    table: tag
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: auto
+    fields:
+        label:
+            type: string
+        createdAt:
+            type: datetime

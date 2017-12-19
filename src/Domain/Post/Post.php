@@ -2,6 +2,9 @@
 
 namespace App\Domain\Post;
 
+use App\Domain\Category\Category;
+use Doctrine\Common\Collections\ArrayCollection;
+
 class Post
 {
     /** @var int */
@@ -16,42 +19,54 @@ class Post
     /** @var \DateTimeInterface */
     private $createdAt;
 
-    public function __construct(string $title, string $content, \DateTimeInterface $createdAt)
+    /** @var Category */
+    private $category;
+
+    /** @var ArrayCollection */
+    private $tags;
+
+    public function __construct(string $title, string $content, \DateTimeInterface $createdAt, Category $category)
     {
         $this->title = $title;
         $this->content = $content;
         $this->createdAt = $createdAt;
+        $this->category = $category;
+        $this->tags = new ArrayCollection();
     }
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
     public function getTitle(): string
     {
         return $this->title;
     }
 
-    /**
-     * @return string
-     */
     public function getContent(): string
     {
         return $this->content;
     }
 
-    /**
-     * @return \DateTimeInterface
-     */
     public function getCreatedAt(): \DateTimeInterface
     {
         return $this->createdAt;
+    }
+
+    /**
+     * @return Category
+     */
+    public function getCategory(): Category
+    {
+        return $this->category;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getTags(): ArrayCollection
+    {
+        return $this->tags;
     }
 }
