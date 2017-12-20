@@ -16,6 +16,8 @@ App\Domain\Post\Post:
     manyToOne:
         category:
             targetEntity: App\Domain\Category\Category
+            joinColumn:
+                nullable: false
     manyToMany:
         tags:
             targetEntity: App\Domain\Tag\Tag
