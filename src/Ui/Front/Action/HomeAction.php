@@ -16,6 +16,6 @@ class HomeAction
 
     public function __invoke(): Response
     {
-        return new Response($this->twig->render('Admin/home.html.twig'));
+        return new Response($this->twig->render('Front/home.html.twig'));
     }
 }
