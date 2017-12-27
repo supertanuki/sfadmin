@@ -1,4 +1,4 @@
-admin_home:
+home:
     path: /
     methods: [GET]
-    defaults: { _controller: App\Ui\Admin\Action\HomeAction }
+    defaults: { _controller: App\Ui\Front\Action\HomeAction }

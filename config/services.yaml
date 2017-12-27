@@ -20,8 +20,8 @@ services:
         resource: '../src/*'
         exclude: '../src/{DataFixtures,Entity,Migrations,Tests}'
 
-    App\Ui\Admin\Action\:
-        resource: '../src/Ui/Admin/Action'
+    App\Ui\Front\Action\:
+        resource: '../src/Ui/Front/Action'
         tags: ['controller.service_arguments']
 
     # controllers are imported separately to make sure they

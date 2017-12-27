@@ -1,11 +1,17 @@
 easy_admin:
+    site_name: 'My admin is chic'
+    design:
+        brand_color: '#1ABC9C'
     entities:
         Category:
             class: App\Domain\Category\Category
-            controller: App\Ui\Admin\Controller\CategoryController
+            controller: App\Ui\Admin\EasyAdminController\CategoryController
         Tag:
             class: App\Domain\Tag\Tag
-            controller: App\Ui\Admin\Controller\TagController
+            controller: App\Ui\Admin\EasyAdminController\TagController
         Post:
             class: App\Domain\Post\Post
-            controller: App\Ui\Admin\Controller\PostController
+            controller: App\Ui\Admin\EasyAdminController\PostController
+        Product:
+            class: App\Domain\Product\Product
+            controller: App\Ui\Admin\EasyAdminController\ProductController

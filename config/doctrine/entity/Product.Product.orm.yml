@@ -1,0 +1,15 @@
+App\Domain\Product\Product:
+    type: entity
+    table: product
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: auto
+    fields:
+        label:
+            type: string
+        unitPrice:
+            type: integer
+        createdAt:
+            type: datetime

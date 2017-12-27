@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Ui\Admin\Controller;
+namespace App\Ui\Admin\EasyAdminController;
 
 use App\Domain\Category\Category;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AdminController as BaseAdminController;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Ui\Admin\Action;
+namespace App\Ui\Front\Action;
 
 use Symfony\Component\HttpFoundation\Response;
 
