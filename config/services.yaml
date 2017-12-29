@@ -24,8 +24,4 @@ services:
         resource: '../src/Ui/Front/Action'
         tags: ['controller.service_arguments']
 
-    # controllers are imported separately to make sure they
-    # have the tag that allows actions to type-hint services
-    # App\Controller\:
-    #     resource: '../src/Controller'
-    #     tags: ['controller.service_arguments']
+    App\Domain\Product\ProductRepositoryInterface: '@App\Infrastructure\Doctrine\Repository\ProductRepository'

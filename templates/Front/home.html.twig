@@ -4,8 +4,10 @@
 
 {% block body %}
     <h1 class="page-header">Home</h1>
-    <div class="alert alert-success">
-        This is a primary alert—check it out!
-        <span class="glyphicon glyphicon-asterisk"></span>
-    </div>
+
+    <ul>
+        {% for product in products %}
+            <li>{{ product.label }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
