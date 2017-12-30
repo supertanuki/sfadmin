@@ -15,7 +15,8 @@
         "symfony/requirements-checker": "^1.0",
         "symfony/web-server-bundle": "^4.0@RC",
         "symfony/webpack-encore-pack": "^1.0",
-        "symfony/yaml": "^4.0"
+        "symfony/yaml": "^4.0",
+        "vich/uploader-bundle": "^1.8"
     },
     "require-dev": {
         "symfony/dotenv": "^4.0"
