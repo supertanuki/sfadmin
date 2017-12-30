@@ -13,3 +13,8 @@ App\Domain\Product\Product:
             type: integer
         createdAt:
             type: datetime
+        updatedAt:
+            type: datetime
+        image:
+            type: string
+            nullable: true

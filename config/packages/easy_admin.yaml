@@ -15,3 +15,14 @@ easy_admin:
         Product:
             class: App\Domain\Product\Product
             controller: App\Ui\Admin\EasyAdminController\ProductController
+            list:
+                fields:
+                    - label
+                    - unitPrice
+                    - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+                    - createdAt
+            form:
+                fields:
+                    - label
+                    - unitPrice
+                    - { property: 'imageFile', type: 'vich_image' }

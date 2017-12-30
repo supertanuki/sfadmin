@@ -1,0 +1,4 @@
+App\Domain\Product\Product:
+    imageFile:
+        mapping: product_image
+        filename_property: image
