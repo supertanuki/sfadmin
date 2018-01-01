@@ -7,7 +7,11 @@
 
     <ul>
         {% for product in products %}
-            <li>{{ product.label }}</li>
+            <li>
+                <a href="{{ path('product_show', { product: product.id }) }}">
+                    {{ product.label }}
+                </a>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}

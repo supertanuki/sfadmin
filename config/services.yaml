@@ -19,7 +19,7 @@ services:
     # this creates a service per class whose id is the fully-qualified class name
     App\:
         resource: '../src/*'
-        exclude: '../src/{DataFixtures,Entity,Migrations,Tests}'
+        exclude: '../src/{DataFixtures,Migrations,Tests,Domain/Product/Product.php}'
 
     App\Ui\Front\Action\:
         resource: '../src/Ui/Front/Action'

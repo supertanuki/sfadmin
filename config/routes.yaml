@@ -2,3 +2,10 @@ home:
     path: /
     methods: [GET]
     defaults: { _controller: App\Ui\Front\Action\HomeAction }
+
+product_show:
+    path: /product/{product}
+    methods: [GET]
+    defaults: { _controller: App\Ui\Front\Action\Product\ShowAction }
+    requirements:
+        product: \d+

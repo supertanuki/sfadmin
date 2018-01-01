@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title product.label %}
+
+{% block body %}
+    <p><a href="{{ path('home') }}"><span class="glyphicon glyphicon-home"></span> Home</a></p>
+
+    <h1 class="page-header">{{ product.label }}</h1>
+
+    <p>{{ product.unitPrice }} €</p>
+
+    {% if product.image %}
+        <img src="{{ vich_uploader_asset(product, 'imageFile') }}" alt="{{ product.label }}" />
+    {% endif %}
+{% endblock %}
