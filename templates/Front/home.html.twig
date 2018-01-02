@@ -1,17 +1,32 @@
 {% extends 'base.html.twig' %}
 
-{% block title 'Home' %}
+{% block title 'My Tiny Shop' %}
+
+{% block nav '' %}
+
+{% block bodyClass '' %}
 
 {% block body %}
-    <h1 class="page-header">Home</h1>
+    <h1 class="page-header"><span class="glyphicon glyphicon-shopping-cart"></span> My Tiny Shop</h1>
 
-    <ul>
+    <div class="row">
         {% for product in products %}
-            <li>
-                <a href="{{ path('product_show', { product: product.id }) }}">
-                    {{ product.label }}
-                </a>
-            </li>
+            <div class="col-sm-3 col-md-2">
+                <div class="thumbnail product-preview">
+                    <a href="{{ path('product_show', { product: product.id }) }}">
+                        <img src="{{ product.image ? vich_uploader_asset(product, 'imageFile') : asset('build/images/default-no-image.png') }}" alt="{{ product.label }}" />
+                    </a>
+
+                    <div class="caption">
+                        <h2>
+                            <a href="{{ path('product_show', { product: product.id }) }}">
+                                {{ product.label }}
+                            </a>
+                        </h2>
+                        <p><span class="price label label-success">{{ product.unitPrice|localizedcurrency('EUR') }}</span></p>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 {% endblock %}

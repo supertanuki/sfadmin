@@ -4,3 +4,21 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 // the ~ allows you to reference things in node_modules
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  &.with-nav {
+    margin-top: 60px;
+  }
+}
+
+.product-preview {
+  height: 340px;
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+.price {
+  font-size: 16px;
+}

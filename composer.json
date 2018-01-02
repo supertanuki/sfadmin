@@ -16,6 +16,7 @@
         "symfony/web-server-bundle": "^4.0@RC",
         "symfony/webpack-encore-pack": "^1.0",
         "symfony/yaml": "^4.0",
+        "twig/extensions": "^1.5",
         "vich/uploader-bundle": "^1.8"
     },
     "require-dev": {

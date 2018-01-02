@@ -10,7 +10,15 @@
             <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
         {% endblock %}
     </head>
-    <body>
+    <body class="{% block bodyClass %}with-nav{% endblock %}">
+        {% block nav %}
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{{ path('home') }}"><span class="glyphicon glyphicon-shopping-cart"></span> My Tiny Shop</a>
+                </div>
+            </nav>
+        {% endblock %}
+
         <div class="container-fluid">
             {% block body %}{% endblock %}
         </div>
